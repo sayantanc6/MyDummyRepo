@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 public class EmployeeModel {
     private int empid;
     private boolean enabled;
-	private String username;
 	private String firstname;
+	private String username;
 	private String lastname;
 	private String email;
 	private String password1;
@@ -19,13 +19,13 @@ public class EmployeeModel {
 	
 	
 	
-	public EmployeeModel(int empid, boolean enabled, String username, String firstname, String lastname, String email,
+	public EmployeeModel(int empid, boolean enabled, String firstname, String username, String lastname, String email,
 			String password1, String password2, byte[] photo) {
 		super();
 		this.empid = empid;
 		this.enabled = enabled;
-		this.username = username;
 		this.firstname = firstname;
+		this.username = username;
 		this.lastname = lastname;
 		this.email = email;
 		this.password1 = password1;
@@ -49,6 +49,15 @@ public class EmployeeModel {
 
 	public void setFirstname(String firstname) {
 		this.firstname = firstname;
+	}
+	
+	@Mapping("username")
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	@Mapping("lastname")
@@ -75,15 +84,6 @@ public class EmployeeModel {
 
 	public void setEnabled(boolean enabled) {
 		this.enabled = enabled;
-	}
-
-	@Mapping("username")
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
 	}
 
 	@Mapping("password")
@@ -115,8 +115,8 @@ public class EmployeeModel {
 
 	@Override
 	public String toString() {
-		return "EmployeeModel [empid=" + empid + ", enabled=" + enabled + ", username=" + username + ", firstname="
-				+ firstname + ", lastname=" + lastname + ", email=" + email + ", password1=" + password1
+		return "EmployeeModel [empid=" + empid + ", enabled=" + enabled + ", firstname="
+				+ firstname + ", username=" + username + ", lastname=" + lastname + ", email=" + email + ", password1=" + password1
 				+ ", password2=" + password2 + ", photo=" + Arrays.toString(photo) + "]";
 	}
 

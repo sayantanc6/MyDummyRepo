@@ -24,9 +24,9 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import dummy.entity.VerificationToken;
 import dummy.model.EmployeeModel;
 import dummy.security.OnRegistrationCompleteEvent;
-import dummy.security.VerificationToken;
 import dummy.service.EmployeeServiceImpl;
 
 @RestController

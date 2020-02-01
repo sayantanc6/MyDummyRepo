@@ -1,4 +1,4 @@
-package dummy.security;
+package dummy.entity;
 
 import java.sql.Date;
 import java.sql.Timestamp;
