@@ -10,9 +10,9 @@ import org.springframework.stereotype.Service;
 
 import dummy.entity.CompositeEmployeeId;
 import dummy.entity.EmployeeEntity;
+import dummy.entity.VerificationToken;
 import dummy.model.EmployeeModel;
 import dummy.repository.EmployeeRepository;
-import dummy.security.VerificationToken;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {

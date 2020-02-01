@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.Lob;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name="EMPLOYEE_TABLE")
 public class EmployeeEntity {   
@@ -22,6 +24,9 @@ public class EmployeeEntity {
     @Column(name="FIRST_NAME")
     private String firstname;
     
+    @Column(name="FIRST_NAME")
+    private String username;
+    
     @Column(name="LAST_NAME")
     private String lastname;
     
@@ -29,6 +34,7 @@ public class EmployeeEntity {
     private String email;
     
     @Column(name="PASSWORD")
+    @JsonIgnore
     private String password;
     
     @Lob
@@ -78,6 +84,14 @@ public class EmployeeEntity {
 		this.firstname = firstname;
 	}
 
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
 	public String getLastname() {
 		return lastname;
 	}
@@ -112,9 +126,12 @@ public class EmployeeEntity {
 
 	@Override
 	public String toString() {
-		return "EmployeeEntity [id=" + id + ", enabled=" + enabled + ", firstname=" + firstname + ", lastname="
-				+ lastname + ", email=" + email + ", password=" + password + ", photo=" + Arrays.toString(photo) + "]";
+		return "EmployeeEntity [id=" + id + ", enabled=" + enabled + ", firstname=" + firstname + ", username="
+				+ username + ", lastname=" + lastname + ", email=" + email + ", password=" + password + ", photo="
+				+ Arrays.toString(photo) + "]";
 	}
+
+
 	
 	
  }
