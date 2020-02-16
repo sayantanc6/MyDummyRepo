@@ -18,6 +18,7 @@ import org.springframework.web.servlet.theme.CookieThemeResolver;
 import org.springframework.web.servlet.theme.ThemeChangeInterceptor;
 
 @Configuration
+@EnableTransactionManagement
 public class MyConfiguration  implements WebMvcConfigurer {
 	
 	@Bean
@@ -87,5 +88,34 @@ public class MyConfiguration  implements WebMvcConfigurer {
 		registry.addInterceptor(themeChangeInterceptor());
 	}
 	
+	 @Bean
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
+        final LocalContainerEntityManagerFactoryBean emf = new LocalContainerEntityManagerFactoryBean();
+        emf.setDataSource(restDataSource());
+        emf.setPackagesToScan(new String[] { "com.baeldung.persistence.model" });
+
+        final JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
+        emf.setJpaVendorAdapter(vendorAdapter);
+
+        return emf;
+    }
+	
+	    @Bean
+    public DataSource restDataSource() {
+        final BasicDataSource dataSource = new BasicDataSource();
+        dataSource.setDriverClassName(Preconditions.checkNotNull(env.getProperty("spring.datasource.driverClassName")));
+        dataSource.setUrl(Preconditions.checkNotNull(env.getProperty("spring.datasource.url")));
+        dataSource.setUsername(Preconditions.checkNotNull(env.getProperty("spring.datasource.user")));
+        dataSource.setPassword(Preconditions.checkNotNull(env.getProperty("spring.datasource.password")));
+
+        return dataSource;
+    }
+
+    @Bean
+    public PlatformTransactionManager hibernateTransactionManager() {
+        final HibernateTransactionManager transactionManager = new HibernateTransactionManager();
+        transactionManager.setSessionFactory(sessionFactory().getObject());
+        return transactionManager;
+    }
 	
 }
