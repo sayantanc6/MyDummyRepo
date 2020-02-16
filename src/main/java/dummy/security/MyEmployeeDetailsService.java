@@ -15,8 +15,8 @@ import dummy.repository.EmployeeRepository;
 
 @Service
 public class MyEmployeeDetailsService implements UserDetailsService {
+
 	
-	@Autowired
 	EmployeeEntity emp;
 	
 	@Autowired
@@ -46,14 +46,6 @@ public class MyEmployeeDetailsService implements UserDetailsService {
 		emp.setUsername(user.getUsername());
 		emp.setPassword(bcryptEncoder.encode(user.getPassword1()));
 		return empRepo.save(newUser);
-	}
-
-
-
-	
-
-	public void createVerificationToken(EmployeeModel emp, String token) {	
-		
 	}
 
 }
