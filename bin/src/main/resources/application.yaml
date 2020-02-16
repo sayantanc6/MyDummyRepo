@@ -1,0 +1,68 @@
+logging:
+  level:
+    org:
+      hibernate:
+        stat: debug
+        type: trace
+oauth2:
+  accessTokenUri: https://www.googleapis.com/oauth2/v4/token
+  userAuthorizationUri: https://accounts.google.com/o/oauth2/v2/auth
+  userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
+security:
+  oauth2:
+    client:
+      access-token-uri: https://github.com/login/oauth/access_token
+      provider:
+        facebook:
+          authorizationUri: https://www.facebook.com/v3.0/dialog/oauth
+          tokenUri: https://graph.facebook.com/v3.0/oauth/access_token
+          userInfoUri: https://graph.facebook.com/v3.0/me?fields=id,first_name,middle_name,last_name,name,email,verified,is_verified,picture.width(250).height(250)
+      registration:
+        facebook:
+          client-id: 540438673220082
+          client-secret: 007a4d626fbedb2dfb6b64d3f2d2b61c
+          redirectUriTemplate: '{baseUrl}/oauth2/callback/{registrationId}'
+          scope: email,public_profile
+        github:
+          client-id: 9a14c5cf04f63474d860
+          client-secret: 733a94eae879867a943fa8991c58e94816ba97a6
+          redirectUriTemplate: '{baseUrl}/oauth2/callback/{registrationId}'
+          scope: read:user,user:email
+        google:
+          client-id: 277000750270-2rjbdh3mf06aqj946a55aj38g61si20v.apps.googleusercontent.com
+          client-secret: vfOP_28IwKq4pwcq4uJS1v3m
+          redirectUriTemplate: '{baseUrl}/oauth2/callback/{registrationId}'
+          scope: https://www.googleapis.com/auth/userinfo.email,https://www.googleapis.com/auth/userinfo.profile
+      user-authorization-uri: https://github.com/login/oauth/authorize
+    resource:
+      user-info-uri: https://api.github.com/user
+spring:
+  application:
+    name: MySpringMVC
+  datasource:
+    driverClassName: org.h2.Driver
+    password: password
+    url: jdbc:hsqldb:mem:myDB
+    username: sa
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      use-new-id-generator-mappings: true
+    properties:
+      hibernate:
+        format_sql: true
+        generate_statistics: true
+    show-sql: true
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+server:
+  port: 8081

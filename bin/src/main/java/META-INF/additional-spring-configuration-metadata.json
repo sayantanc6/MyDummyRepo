@@ -1,0 +1,177 @@
+{"properties": [
+  {
+    "name": "security.oauth2.client.registration.google.client-id",
+    "type": "java.lang.String",
+    "description": "A description for 'security.oauth2.client.registration.google.client-id'"
+  },
+  {
+    "name": "security.oauth2.client.registration.facebook.client-id",
+    "type": "java.lang.String",
+    "description": "A description for 'security.oauth2.client.registration.facebook.client-id'"
+  },
+  {
+    "name": "security.oauth2.client.registration.github.client-id",
+    "type": "java.lang.String",
+    "description": "A description for 'security.oauth2.client.registration.github.client-id'"
+  },
+  {
+    "name": "security.oauth2.client.registration.google.client-secret",
+    "type": "java.lang.String",
+    "description": "A description for 'security.oauth2.client.registration.google.client-secret'"
+  },
+  {
+    "name": "security.oauth2.client.registration.google.scope",
+    "type": "java.lang.String",
+    "description": "A description for 'security.oauth2.client.registration.google.scope'"
+  },
+  {
+    "name": "security.oauth2.client.registration.facebook.client-secret",
+    "type": "java.lang.String",
+    "description": "A description for 'security.oauth2.client.registration.facebook.client-secret'"
+  },
+  {
+    "name": "security.oauth2.client.registration.facebook.scope",
+    "type": "java.lang.String",
+    "description": "A description for 'security.oauth2.client.registration.facebook.scope'"
+  },
+  {
+    "name": "security.oauth2.client.provider.facebook.userInfoUri",
+    "type": "java.lang.String",
+    "description": "A description for 'security.oauth2.client.provider.facebook.userInfoUri'"
+  },
+  {
+    "name": "security.oauth2.client.provider.facebook.userInfoUri",
+    "type": "java.lang.String",
+    "description": "A description for 'security.oauth2.client.provider.facebook.userInfoUri'"
+  },
+  {
+    "name": "security.oauth2.client.provider.facebook.authorizationUri",
+    "type": "java.lang.String",
+    "description": "A description for 'security.oauth2.client.provider.facebook.authorizationUri'"
+  },
+  {
+    "name": "security.oauth2.client.provider.facebook.tokenUri",
+    "type": "java.lang.String",
+    "description": "A description for 'security.oauth2.client.provider.facebook.tokenUri'"
+  },
+  {
+    "name": "security.oauth2.client.provider.facebook.userInfoUri",
+    "type": "java.lang.String",
+    "description": "A description for 'security.oauth2.client.provider.facebook.userInfoUri'"
+  },
+  {
+    "name": "facebook",
+    "type": "java.lang.String",
+    "description": "A description for 'facebook'"
+  },
+  {
+    "name": "security.oauth2.client.registration.github.client-secret",
+    "type": "java.lang.String",
+    "description": "A description for 'security.oauth2.client.registration.github.client-secret'"
+  },
+  {
+    "name": "security.oauth2.client.registration.facebook.redirectUriTemplate",
+    "type": "java.lang.String",
+    "description": "A description for 'security.oauth2.client.registration.facebook.redirectUriTemplate'"
+  },
+  {
+    "name": "security.oauth2.client.registration.google.redirectUriTemplate",
+    "type": "java.lang.String",
+    "description": "A description for 'security.oauth2.client.registration.google.redirectUriTemplate'"
+  },
+  {
+    "name": "security.oauth2.client.registration.github.redirectUriTemplate",
+    "type": "java.lang.String",
+    "description": "A description for 'security.oauth2.client.registration.github.redirectUriTemplate'"
+  },
+  {
+    "name": "security.oauth2.client.registration.github.scope",
+    "type": "java.lang.String",
+    "description": "A description for 'security.oauth2.client.registration.github.scope'"
+  },
+  {
+    "name": "ecurity.oauth2.client.provider.facebook.authorizationUri",
+    "type": "java.lang.String",
+    "description": "A description for 'ecurity.oauth2.client.provider.facebook.authorizationUri'"
+  },
+  {
+    "name": "spring.ecurity.oauth2.client.provider.facebook.authorizationUri",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.ecurity.oauth2.client.provider.facebook.authorizationUri'"
+  },
+  {
+    "name": "spring.ecurity.oauth2.client.provider.facebook.authorizationUri",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.ecurity.oauth2.client.provider.facebook.authorizationUri'"
+  },
+  {
+    "name": "spring.ecurity.oauth2.client.provider.facebook.authorizationUri",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.ecurity.oauth2.client.provider.facebook.authorizationUri'"
+  },
+  {
+    "name": "spring.ecurity.oauth2.client.provider.facebook.authorizationUri",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.ecurity.oauth2.client.provider.facebook.authorizationUri'"
+  },
+  {
+    "name": "spring.ecurity.oauth2.client.provider.facebook.authorizationUri",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.ecurity.oauth2.client.provider.facebook.authorizationUri'"
+  },
+  {
+    "name": "security.oauth2.client.provider.facebook.authorizationUri",
+    "type": "java.lang.String",
+    "description": "A description for 'security.oauth2.client.provider.facebook.authorizationUri'"
+  },
+  {
+    "name": "security.oauth2.client.provider.facebook.authorizationUri",
+    "type": "java.lang.String",
+    "description": "A description for 'security.oauth2.client.provider.facebook.authorizationUri'"
+  },
+  {
+    "name": "security.oauth2.client.provider.facebook.authorizationUri",
+    "type": "java.lang.String",
+    "description": "A description for 'security.oauth2.client.provider.facebook.authorizationUri'"
+  },
+  {
+    "name": "security.oauth2.client.provider.facebook.authorizationUri",
+    "type": "java.lang.String",
+    "description": "A description for 'security.oauth2.client.provider.facebook.authorizationUri'"
+  },
+  {
+    "name": "security.user-info-uri",
+    "type": "java.lang.String",
+    "description": "A description for 'security.user-info-uri'"
+  },
+  {
+    "name": "oauth2.userInfoUri",
+    "type": "java.lang.String",
+    "description": "A description for 'oauth2.userInfoUri'"
+  },
+  {
+    "name": "jdbc.driverClassName",
+    "type": "java.lang.String",
+    "description": "A description for 'jdbc.driverClassName'"
+  },
+  {
+    "name": "hibernate.dialect",
+    "type": "java.lang.String",
+    "description": "A description for 'hibernate.dialect'"
+  },
+  {
+    "name": "oauth2.accessTokenUri",
+    "type": "java.lang.String",
+    "description": "A description for 'oauth2.accessTokenUri'"
+  },
+  {
+    "name": "oauth2.userAuthorizationUri",
+    "type": "java.lang.String",
+    "description": "A description for 'oauth2.userAuthorizationUri'"
+  },
+  {
+    "name": "jwt.secret",
+    "type": "java.lang.String",
+    "description": "A description for 'jwt.secret'"
+  }
+]}
