@@ -82,10 +82,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 		empRepo.LockByID(empId);
 	}
 
-	public VerificationToken getVerificationToken(String token) {
-		return null; 
-	}
-
 	public void saveRegisteredUser(EmployeeModel model) {
 
 		empRepo.saveAndFlush(mapper.map(model, EmployeeEntity.class));
