@@ -13,7 +13,7 @@ public class MyDTOConfigurer extends BeanMappingBuilder {
 	
 	@Autowired
 	DozerBeanMapper mapper;
-
+ 
 	@Override
 	protected void configure() {
 		mapping(EmployeeEntity.class, EmployeeModel.class, TypeMappingOptions.wildcard(false));

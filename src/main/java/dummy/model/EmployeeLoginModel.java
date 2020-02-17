@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 @Component("loginModel")
 public class EmployeeLoginModel {
-	
+	 
 	private String username;
 	private String password;
 	private Boolean accounLock;

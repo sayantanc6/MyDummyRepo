@@ -18,7 +18,7 @@ public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
 		oauthServer.tokenKeyAccess("permitAll()")
         .checkTokenAccess("isAuthenticated()");
 	}
-
+ 
 	@Override
 	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 		clients.inMemory()

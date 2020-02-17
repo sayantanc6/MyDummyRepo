@@ -10,7 +10,7 @@ import javax.persistence.GenerationType;
 
 @Embeddable
 public class CompositeEmployeeId implements Serializable{
-	
+	 
 
 	private static final long serialVersionUID = 1L;
 

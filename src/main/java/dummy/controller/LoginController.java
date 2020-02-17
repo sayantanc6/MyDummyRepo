@@ -14,7 +14,7 @@ import dummy.service.EmployeeServiceImpl;
 @RestController
 public class LoginController {
 	
-	//abc
+	
 	@Autowired
 	EmployeeServiceImpl empService;
 	

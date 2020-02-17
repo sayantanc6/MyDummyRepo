@@ -24,7 +24,7 @@ import dummy.security.JwtAuthenticationEntryPoint;
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class MySecurityConfigurer extends WebSecurityConfigurerAdapter {
-	
+	 
 	@Autowired
 	private JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
 

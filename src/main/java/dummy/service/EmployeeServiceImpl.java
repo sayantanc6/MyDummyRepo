@@ -28,7 +28,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	
 	List<EmployeeModel>  employeeModels;
 	
-	@Autowired
+	
 	EmployeeEntity emp;
 	
     CompositeEmployeeId empId;

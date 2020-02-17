@@ -11,7 +11,7 @@ import org.springframework.mail.javamail.JavaMailSender;
 import dummy.model.EmployeeModel;
 
 public class RegistrationListener implements ApplicationListener<OnRegistrationCompleteEvent> {
-	
+	 
 	@Autowired
 	EmployeeModel emp;
 	

@@ -13,7 +13,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 @Table(name="EMPLOYEE_TABLE")
 public class EmployeeEntity {   
-	
+	 
 	@EmbeddedId
 	private CompositeEmployeeId id;
     

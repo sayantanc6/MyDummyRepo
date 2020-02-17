@@ -26,7 +26,7 @@ import dummy.service.EmployeeServiceImpl;
 
 @RestController
 public class RegistrationController {
-	
+	 
 	@Autowired
 	ApplicationEventPublisher eventPublisher;
 	

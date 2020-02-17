@@ -35,7 +35,7 @@ public class MyConfiguration  implements WebMvcConfigurer {
 	
 	@Autowired
 	Environment env;
-	
+	 
 	@Bean
 	public SessionLocaleResolver localeresolver() {
 	    SessionLocaleResolver slr = new SessionLocaleResolver();

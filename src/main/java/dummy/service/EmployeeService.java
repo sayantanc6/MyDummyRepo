@@ -3,7 +3,7 @@ package dummy.service;
 import java.util.List;
 
 import dummy.model.EmployeeModel;
-
+ 
 public interface EmployeeService {
 	public void LockByID(int empId);
 	public List<EmployeeModel> getAll();

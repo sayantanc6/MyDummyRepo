@@ -17,7 +17,7 @@ import dummy.entity.EmployeeEntity;
 
 @Repository
 public interface EmployeeRepository extends JpaRepository<EmployeeEntity, CompositeEmployeeId> {
-
+ 
 	EmployeeEntity findByUsername(String username);
 
 	EmployeeEntity findByEmail(String email);

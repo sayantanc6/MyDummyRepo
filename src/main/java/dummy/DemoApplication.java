@@ -10,7 +10,7 @@ import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 
 import dummy.config.YamlPropertySourceFactory;
-
+ 
 @SpringBootApplication
 @EnableResourceServer
 @PropertySource(factory = YamlPropertySourceFactory.class, value = "classpath:application.yaml")

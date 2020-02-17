@@ -15,7 +15,7 @@
         <param name="facility" value="log4j"/>
         <param name="Threshold" value="DEBUG"/>
         <param name="additionalFields" value="{'environment': 'DEV', 'application': 'GraylogDemoApplication'}"/>
-    </appender>
+    </appender> 
     <root>
         <priority value="DEBUG"/>
         <appender-ref ref="stdout"/>

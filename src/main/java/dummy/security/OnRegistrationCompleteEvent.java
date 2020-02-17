@@ -11,7 +11,7 @@ import dummy.model.EmployeeModel;
 public class OnRegistrationCompleteEvent extends ApplicationEvent {
 	
 	
-
+ 
 	private static final long serialVersionUID = 1161598696604879344L;
 	
 	private HttpServletRequest request;

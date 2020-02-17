@@ -16,7 +16,7 @@ import dummy.model.EmployeeLoginModel;
 public class MyEmployeeDetails implements UserDetails {
 
 	private static final long serialVersionUID = 1L;
-	
+	 
 	@Autowired
 	EmployeeLoginModel loginModel;
 	

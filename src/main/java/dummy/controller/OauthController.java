@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class OauthController {
-	
+	 
 	 @RequestMapping("/")
 	    public String login() {
 	        Authentication auth = SecurityContextHolder.getContext().getAuthentication();

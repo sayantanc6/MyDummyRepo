@@ -5,7 +5,7 @@
             <PatternLayout
                 pattern="%style{%d{ISO8601}}{black} %highlight{%-5level }[%style{%t}{bright,blue}] %style{%C{1.}}{bright,yellow}: %msg%n%throwable" />
         </Console>
- 
+  
         <RollingFile name="RollingFile"
             fileName="./logs/spring-boot-logger-log4j2.log"
             filePattern="./logs/$${date:yyyy-MM}/spring-boot-logger-log4j2-%d{-dd-MMMM-yyyy}-%i.log.gz">

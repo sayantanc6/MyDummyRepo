@@ -16,7 +16,7 @@ import dummy.repository.EmployeeRepository;
 @Service
 public class MyEmployeeDetailsService implements UserDetailsService {
 	
-	@Autowired
+	
 	EmployeeEntity emp;
 	
 	@Autowired

@@ -17,7 +17,7 @@ public class EmployeeModel {
 	private String password2;
 	private byte[] photo;
 	
-	
+	 
 	
 	public EmployeeModel(int empid, boolean enabled, String firstname, String username, String lastname, String email,
 			String password1, String password2, byte[] photo) {
