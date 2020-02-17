@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 import dummy.entity.CompositeEmployeeId;
 import dummy.entity.EmployeeEntity;
-import dummy.entity.VerificationToken;
 import dummy.model.EmployeeModel;
 import dummy.repository.EmployeeRepository;
 
@@ -29,7 +28,9 @@ public class EmployeeServiceImpl implements EmployeeService {
 	
 	List<EmployeeModel>  employeeModels;
 	
+	@Autowired
 	EmployeeEntity emp;
+	
     CompositeEmployeeId empId;
 
 
@@ -61,8 +62,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Override
 	public boolean findEmail(String email) {
-		EmployeeEntity entity = empRepo.findByEmail(email);
-		if(entity != null)
+		emp = empRepo.findByEmail(email);
+		if(emp != null)
 			return true;
 		else
 			return false;
@@ -70,8 +71,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Override
 	public boolean UsernameExists(String username) {
-		EmployeeEntity entity = empRepo.findByUsername(username); 
-		if(entity != null)
+		emp = empRepo.findByUsername(username); 
+		if(emp != null)
 			return true;
 		else
 			return false;
@@ -80,10 +81,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Override
 	public void LockByID(int empId) {
 		empRepo.LockByID(empId);
-	}
-
-	public VerificationToken getVerificationToken(String token) {
-		return null; 
 	}
 
 	public void saveRegisteredUser(EmployeeModel model) {

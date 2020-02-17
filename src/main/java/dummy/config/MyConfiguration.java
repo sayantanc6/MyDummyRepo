@@ -3,10 +3,21 @@ package dummy.config;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
+import javax.sql.DataSource;
+
+import org.springframework.core.env.Environment;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.http.CacheControl;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.orm.hibernate5.HibernateTransactionManager;
+import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
+import org.springframework.orm.jpa.JpaVendorAdapter;
+import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.ui.context.support.ResourceBundleThemeSource;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -17,8 +28,13 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.springframework.web.servlet.theme.CookieThemeResolver;
 import org.springframework.web.servlet.theme.ThemeChangeInterceptor;
 
+import com.google.common.base.Preconditions;
+
 @Configuration
 public class MyConfiguration  implements WebMvcConfigurer {
+	
+	@Autowired
+	Environment env;
 	
 	@Bean
 	public SessionLocaleResolver localeresolver() {
@@ -87,5 +103,45 @@ public class MyConfiguration  implements WebMvcConfigurer {
 		registry.addInterceptor(themeChangeInterceptor());
 	}
 	
+	@Bean
+    public LocalSessionFactoryBean sessionFactory() {
+        final LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
+        sessionFactory.setDataSource(restDataSource());
+        sessionFactory.setPackagesToScan(new String[] { "com.baeldung.persistence.model" });
+
+        return sessionFactory;
+    }
+
 	
-}
+	 @Bean
+	    public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
+	        final LocalContainerEntityManagerFactoryBean emf = new LocalContainerEntityManagerFactoryBean();
+	        emf.setDataSource(restDataSource());
+	        emf.setPackagesToScan(new String[] { "com.baeldung.persistence.model" });
+
+	        final JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
+	        emf.setJpaVendorAdapter(vendorAdapter);
+
+	        return emf;
+	    }
+		
+		    @Bean
+	    public DataSource restDataSource() {
+	        final DriverManagerDataSource dataSource = new DriverManagerDataSource();
+	        
+	        dataSource.setDriverClassName(Preconditions.checkNotNull(env.getProperty("spring.datasource.driverClassName")));
+	        dataSource.setUrl(Preconditions.checkNotNull(env.getProperty("spring.datasource.url")));
+	        dataSource.setUsername(Preconditions.checkNotNull(env.getProperty("spring.datasource.user")));
+	        dataSource.setPassword(Preconditions.checkNotNull(env.getProperty("spring.datasource.password")));
+
+	        return dataSource;
+	    }
+
+	    @Bean
+	    public PlatformTransactionManager hibernateTransactionManager() {
+	        final HibernateTransactionManager transactionManager = new HibernateTransactionManager();
+	        transactionManager.setSessionFactory(sessionFactory().getObject());
+	        return transactionManager;
+	    }
+		
+	}
