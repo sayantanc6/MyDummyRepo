@@ -107,7 +107,7 @@ public class MyConfiguration  implements WebMvcConfigurer {
     public LocalSessionFactoryBean sessionFactory() {
         final LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(restDataSource());
-        sessionFactory.setPackagesToScan(new String[] { "com.baeldung.persistence.model" });
+        sessionFactory.setPackagesToScan(new String[] { "dummy.entity" });
 
         return sessionFactory;
     }
