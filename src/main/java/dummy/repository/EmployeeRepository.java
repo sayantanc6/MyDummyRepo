@@ -17,6 +17,8 @@ import dummy.entity.EmployeeEntity;
 
 @Repository
 public interface EmployeeRepository extends JpaRepository<EmployeeEntity, Integer>, JpaOrmXmlPersistenceUnitDefaultAware {
+	
+	List<EmployeeEntity> findAll();
 
 	EmployeeEntity findByUsername(String username);
 
