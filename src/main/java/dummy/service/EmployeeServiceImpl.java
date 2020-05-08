@@ -35,10 +35,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Override
 	public List<EmployeeModel> getAll() {
-		employeeModels.clear();
-		empRepo.findAll().forEach(emp -> {
-			employeeModels.add(mapper.map(emp, EmployeeModel.class)); 
-			});  
+		List<EmployeeEntity> entityList = repo.findAll();
+		custModels = new ArrayList<CustomerModel>();
+		for (CustomerEntity customerEntity : entityList) {
+			employeeModels.add(mapper.map(EmployeeEntity, EmployeeModel.class));
+		}
 		return employeeModels;
 
 	} 
