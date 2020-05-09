@@ -25,7 +25,7 @@ public interface EmployeeRepository extends JpaRepository<EmployeeEntity, Intege
 	EmployeeEntity findByEmail(String email);
 
 	@Modifying(clearAutomatically = true)
-	@Query("update EmployeeEntity e set e.firstname = :firstname where e.empId= :empId")
+	@Query(value="update EMPLOYEE_TABLE e set e.FIRST_NAME = :firstname where e.EMP_ID= :empId",nativeQuery = true)
 	void updateFirstnameByID(@Param("empId")int empId,@Param("firstname")String firstname);
 
 	@Lock(LockModeType.PESSIMISTIC_READ)
